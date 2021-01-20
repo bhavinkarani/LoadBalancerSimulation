@@ -257,10 +257,8 @@ public class LBPlatform {
             while(!returned.isDone());
             System.out.println(returned.get());
         }
-        System.out.println("111111111111111111111111");
 
 
-        System.out.println("222222222222222222222222");
 
         for(int i=0; i<5; i++){
             Future<String> returned = loadBalancer.get();
@@ -270,7 +268,6 @@ public class LBPlatform {
         p3.setAlive(true);
         loadBalancer.reIncludeProvider(p3);
 
-        System.out.println("33333333333333333333333333");
         for(int i=0; i<50; i++){
             Future<String> returned = loadBalancer.get();
             while(!returned.isDone());
